@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naranja Creativa | Agencia de Marketing y Diseño</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Estilos personalizados y configuración de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#F97316',
+                            dark: '#111827',
+                            medium: '#1F2937',
+                            light: '#374151',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilo para la barra de scroll */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #F97316;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FB923C;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-300 font-sans antialiased">
+
+    <!-- Contenedor principal -->
+    <div id="home">
+
+        <!-- Header y Navegación -->
+        <header class="bg-brand-dark/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50">
+            <div class="container mx-auto px-6 py-4">
+                <div class="flex items-center justify-between">
+                    <a href="#home" class="text-2xl font-bold text-white flex items-center">
+                        <img src="ELEVION/logo_elevion_ai[1].svg" alt="" width="45" height="45"/><span class=""></span>
+                       ELEVION
+                    </a>
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="#services" class="hover:text-brand-orange transition-colors duration-300">Servicios</a>
+                        <a href="#process" class="hover:text-brand-orange transition-colors duration-300">Proceso</a>
+                        <a href="#about" class="hover:text-brand-orange transition-colors duration-300">Nosotros</a>
+                        <a href="#portfolio" class="hover:text-brand-orange transition-colors duration-300">Casos de Éxito</a>
+                        <a href="#testimonials" class="hover:text-brand-orange transition-colors duration-300">Testimonios</a>
+                        <a href="#contact" class="bg-brand-orange text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-600 transition-all duration-300 shadow-lg shadow-orange-500/20">Contáctanos</a>
+                    </nav>
+                    <button id="mobile-menu-button" class="md:hidden text-white">
+                        <i data-lucide="menu"></i>
+                    </button>
+              </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-brand-medium">
+                <nav class="flex flex-col items-center space-y-4 py-6">
+                    <a href="#services" class="mobile-menu-link hover:text-brand-orange transition-colors duration-300">Servicios</a>
+                    <a href="#process" class="mobile-menu-link hover:text-brand-orange transition-colors duration-300">Proceso</a>
+                    <a href="#about" class="mobile-menu-link hover:text-brand-orange transition-colors duration-300">Nosotros</a>
+                    <a href="#portfolio" class="mobile-menu-link hover:text-brand-orange transition-colors duration-300">Casos de Éxito</a>
+                    <a href="#testimonials" class="mobile-menu-link hover:text-brand-orange transition-colors duration-300">Testimonios</a>
+                    <a href="#contact" class="mobile-menu-link bg-brand-orange text-white font-semibold px-5 py-2 rounded-lg hover:bg-orange-600 transition-all duration-300 mt-4">Contáctanos</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Sección Hero con Carrusel -->
+        <main>
+            <section id="carousel-container" class="relative w-full h-screen overflow-hidden">
+                <!-- Slides Wrapper -->
+                <div id="slides-wrapper" class="flex h-full transition-transform duration-700 ease-in-out">
+                    <!-- Slide 1 -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <img src="https://placehold.co/1920x1080/111827/FFFFFF?text=Diseño+Innovador" class="w-full h-full object-cover" alt="[Imagen de un espacio de trabajo creativo]">
+                        <div class="absolute inset-0 bg-black/60"></div>
+                        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">Transformamos <span class="text-brand-orange">Ideas</span> en Impacto</h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">Creatividad, estrategia y tecnología para llevar tu marca al siguiente nivel.</p>
+                            <a href="#contact" class="bg-brand-orange text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/30">Impulsa tu Proyecto</a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <img src="https://placehold.co/1920x1080/F97316/111827?text=Estrategia+Digital" class="w-full h-full object-cover" alt="[Imagen de gráficos de análisis digital]">
+                        <div class="absolute inset-0 bg-black/60"></div>
+                        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">Resultados <span class="text-brand-orange">Medibles</span> y Reales</h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">Conectamos con tu audiencia a través de estrategias de marketing digital efectivas.</p>
+                            <a href="#services" class="bg-transparent border-2 border-brand-orange text-brand-orange font-bold py-3 px-8 rounded-lg text-lg hover:bg-brand-orange hover:text-white transition-all duration-300">Nuestros Servicios</a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="w-full h-full flex-shrink-0 relative">
+                        <img src="https://placehold.co/1920x1080/374151/FFFFFF?text=Branding+Poderoso" class="w-full h-full object-cover" alt="[Imagen de un manual de identidad de marca]">
+                        <div class="absolute inset-0 bg-black/60"></div>
+                        <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6">
+                            <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">Construimos <span class="text-brand-orange">Marcas</span> que Enamoran</h1>
+                            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">Desde el logo hasta la experiencia completa, creamos identidades que dejan huella.</p>
+                            <a href="#portfolio" class="bg-brand-orange text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/30">Ver Proyectos</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Controles de Navegación -->
+                <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full hover:bg-white/40 transition-colors z-20">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+                <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 text-white p-3 rounded-full hover:bg-white/40 transition-colors z-20">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+                <!-- Paginación (Dots) -->
+                <div id="pagination-dots" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20"></div>
+            </section>
+
+            <!-- Sección Servicios -->
+            <section id="services" class="py-20 bg-brand-medium">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Nuestros Servicios</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-white mt-2">Soluciones a la Medida de tu Marca</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-brand-dark p-8 rounded-xl border border-brand-light transform hover:-translate-y-2 transition-transform duration-300">
+                            <i data-lucide="gem" class="w-12 h-12 text-brand-orange mb-6"></i>
+                            <h3 class="text-2xl font-bold text-white mb-3">Branding y Diseño Gráfico</h3>
+                            <p class="text-gray-400">Creamos identidades de marca memorables, desde el logo hasta la guía de estilo completa que te diferenciará.</p>
+                        </div>
+                        <div class="bg-brand-dark p-8 rounded-xl border border-brand-light transform hover:-translate-y-2 transition-transform duration-300">
+                           <i data-lucide="layout-template" class="w-12 h-12 text-brand-orange mb-6"></i>
+                            <h3 class="text-2xl font-bold text-white mb-3">Diseño Web y UX/UI</h3>
+                            <p class="text-gray-400">Desarrollamos sitios web atractivos, funcionales y optimizados para la conversión, centrados en el usuario.</p>
+                        </div>
+                        <div class="bg-brand-dark p-8 rounded-xl border border-brand-light transform hover:-translate-y-2 transition-transform duration-300">
+                            <i data-lucide="megaphone" class="w-12 h-12 text-brand-orange mb-6"></i>
+                            <h3 class="text-2xl font-bold text-white mb-3">Marketing Digital</h3>
+                            <p class="text-gray-400">Ejecutamos estrategias de SEO, SEM y redes sociales para aumentar tu visibilidad y potenciar tus ventas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- NUEVA SECCIÓN: Nuestro Proceso -->
+            <section id="process" class="py-20">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Nuestro Proceso</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-white mt-2">El Camino Hacia tu Éxito</p>
+                    </div>
+                    <div class="relative">
+                        <!-- Línea de tiempo (decorativa) -->
+                        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-brand-light/50 -translate-y-1/2"></div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                            <!-- Paso 1 -->
+                            <div class="text-center relative">
+                                <div class="bg-brand-medium border-2 border-brand-orange w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <span class="text-brand-orange text-3xl font-bold">1</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Descubrimiento</h3>
+                                <p class="text-gray-400">Analizamos tus metas, tu mercado y tu competencia para trazar el mejor plan.</p>
+                            </div>
+                            <!-- Paso 2 -->
+                            <div class="text-center relative">
+                                <div class="bg-brand-medium border-2 border-brand-orange w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <span class="text-brand-orange text-3xl font-bold">2</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Estrategia y Diseño</h3>
+                                <p class="text-gray-400">Creamos el concepto creativo y diseñamos una experiencia de usuario única.</p>
+                            </div>
+                            <!-- Paso 3 -->
+                            <div class="text-center relative">
+                                <div class="bg-brand-medium border-2 border-brand-orange w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <span class="text-brand-orange text-3xl font-bold">3</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Desarrollo</h3>
+                                <p class="text-gray-400">Damos vida al diseño con tecnología de punta, asegurando funcionalidad y rendimiento.</p>
+                            </div>
+                            <!-- Paso 4 -->
+                            <div class="text-center relative">
+                                <div class="bg-brand-medium border-2 border-brand-orange w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <span class="text-brand-orange text-3xl font-bold">4</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">Lanzamiento y Mejora</h3>
+                                <p class="text-gray-400">Lanzamos tu proyecto y medimos los resultados para una optimización continua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Sección Sobre Nosotros -->
+            <section id="about" class="py-20 bg-brand-medium">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
+                        <div class="lg:w-1/2">
+                            <img src="https://placehold.co/600x400/F97316/111827?text=Nuestro+Equipo" alt="[Imagen del equipo de la agencia]" class="rounded-xl shadow-2xl">
+                        </div>
+                        <div class="lg:w-1/2">
+                            <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Quienes Somos</h2>
+                            <p class="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Apasionados por la Creatividad y los Resultados</p>
+                            <p class="text-gray-400 mb-4">Somos un equipo multidisciplinario de estrategas, diseñadores y especialistas en marketing comprometidos con tu éxito.</p>
+                            <p class="text-gray-400">Nuestra filosofía se basa en la colaboración, la transparencia y la innovación. Nos sumergimos en tu negocio para entender tus metas y ofrecerte soluciones que realmente funcionen.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Casos de Éxito / Portfolio -->
+            <section id="portfolio" class="py-20">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Casos de Éxito</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-white mt-2">Proyectos que Impulsan Marcas</p>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="group relative overflow-hidden rounded-xl">
+                            <img src="https://placehold.co/600x400/111827/FFFFFF?text=Proyecto+1" alt="[Imagen del proyecto 1]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <h3 class="text-xl font-bold text-white">Marca de Moda Sostenible</h3>
+                                <p class="text-brand-orange text-sm">Branding y E-commerce</p>
+                            </div>
+                        </div>
+                         <div class="group relative overflow-hidden rounded-xl">
+                            <img src="https://placehold.co/600x400/374151/FFFFFF?text=Proyecto+2" alt="[Imagen del proyecto 2]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <h3 class="text-xl font-bold text-white">App de Fitness</h3>
+                                <p class="text-brand-orange text-sm">Diseño UX/UI</p>
+                            </div>
+                        </div>
+                         <div class="group relative overflow-hidden rounded-xl">
+                            <img src="https://placehold.co/600x400/F97316/FFFFFF?text=Proyecto+3" alt="[Imagen del proyecto 3]" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-black/70 flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                <h3 class="text-xl font-bold text-white">Restaurante Gourmet</h3>
+                                <p class="text-brand-orange text-sm">Marketing en Redes Sociales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+             <!-- NUEVA SECCIÓN: Testimonios -->
+            <section id="testimonials" class="py-20 bg-brand-medium">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Testimonios</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-white mt-2">Lo que Nuestros Clientes Dicen</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <!-- Testimonio 1 -->
+                        <div class="bg-brand-dark p-8 rounded-xl border border-brand-light">
+                            <i data-lucide="quote" class="w-10 h-10 text-brand-orange mb-4"></i>
+                            <p class="text-gray-400 italic mb-6">"Trabajar con Naranja Creativa fue un antes y un después para nuestra marca. Su creatividad y profesionalismo superaron todas nuestras expectativas."</p>
+                            <div>
+                                <p class="font-bold text-white">Ana García</p>
+                                <p class="text-sm text-brand-orange">CEO de EcoModa</p>
+                            </div>
+                        </div>
+                        <!-- Testimonio 2 -->
+                        <div class="bg-brand-dark p-8 rounded-xl border border-brand-light">
+                            <i data-lucide="quote" class="w-10 h-10 text-brand-orange mb-4"></i>
+                            <p class="text-gray-400 italic mb-6">"El equipo no solo diseñó nuestra web, sino que nos brindó una estrategia digital completa que duplicó nuestros leads en tres meses. ¡Increíble!"</p>
+                            <div>
+                                <p class="font-bold text-white">Carlos Martínez</p>
+                                <p class="text-sm text-brand-orange">Fundador de FitApp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Contacto -->
+            <section id="contact" class="py-20">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16">
+                        <h2 class="text-sm font-bold uppercase text-brand-orange tracking-widest">Contacto</h2>
+                        <p class="text-3xl md:text-4xl font-bold text-white mt-2">Hablemos de tu Proyecto</p>
+                        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Completa el formulario y nos pondremos en contacto contigo para transformar tus ideas en realidad.</p>
+                    </div>
+                    <div class="max-w-3xl mx-auto bg-brand-medium p-8 md:p-12 rounded-xl border border-brand-light">
+                        <form action="#" method="POST">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <input type="text" placeholder="Tu nombre" class="w-full bg-brand-dark border-brand-light border-2 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" required>
+                                <input type="email" placeholder="Tu correo electrónico" class="w-full bg-brand-dark border-brand-light border-2 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" required>
+                            </div>
+                            <div class="mb-6">
+                                <input type="text" placeholder="Asunto" class="w-full bg-brand-dark border-brand-light border-2 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" required>
+                            </div>
+                            <div class="mb-6">
+                                <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5" class="w-full bg-brand-dark border-brand-light border-2 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-orange transition-all" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="bg-brand-orange text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-orange-600 transform hover:scale-105 transition-all duration-300 shadow-xl shadow-orange-500/30">Enviar Mensaje</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-brand-dark border-t border-brand-light">
+            <div class="container mx-auto px-6 py-8 text-center md:text-left">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div>
+                        <a href="#home" class="text-2xl font-bold text-white flex items-center justify-center md:justify-start">
+                            <span class="bg-brand-orange text-brand-dark rounded-md px-2 py-1 mr-2">N</span>
+                            Naranja Creativa
+                        </a>
+                         <p class="text-gray-400 mt-4">Transformando ideas en resultados digitales.</p>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-white mb-4">Enlaces Rápidos</h4>
+                        <nav class="flex flex-col space-y-2">
+                           <a href="#services" class="text-gray-400 hover:text-brand-orange transition-colors">Servicios</a>
+                           <a href="#about" class="text-gray-400 hover:text-brand-orange transition-colors">Nosotros</a>
+                           <a href="#portfolio" class="text-gray-400 hover:text-brand-orange transition-colors">Casos de Éxito</a>
+                           <a href="#contact" class="text-gray-400 hover:text-brand-orange transition-colors">Contacto</a>
+                        </nav>
+                    </div>
+                     <div>
+                        <h4 class="font-bold text-white mb-4">Síguenos</h4>
+                        <div class="flex space-x-6 justify-center md:justify-start">
+                            <a href="https://www.instagram.com/elevion_mkt?igsh=MWdzcWt3aDRienAw" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-orange transition-colors"><i data-lucide="instagram"></i></a>
+                            <a href="https://facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-orange transition-colors"><i data-lucide="facebook"></i></a>
+                            <a href="https://wa.me/message/UTADXNFXSGSLD1" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-orange transition-colors"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-brand-light text-center text-gray-400">
+                    <p>&copy; 2024 Naranja Creativa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Activar iconos Lucide
+        lucide.createIcons();
+
+        // --- Lógica para menú móvil ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- Lógica para el carrusel ---
+        const carouselContainer = document.getElementById('carousel-container');
+        const slidesWrapper = document.getElementById('slides-wrapper');
+        const slides = slidesWrapper.children;
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const paginationDots = document.getElementById('pagination-dots');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+        let slideInterval;
+
+        // Crear los puntos de paginación
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-colors');
+            dot.addEventListener('click', () => {
+                goToSlide(i);
+            });
+            paginationDots.appendChild(dot);
+        }
+
+        function updateCarousel() {
+            slidesWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+            
+            // Actualizar el punto activo
+            Array.from(paginationDots.children).forEach((dot, index) => {
+                if (index === currentIndex) {
+                    dot.classList.add('bg-brand-orange');
+                    dot.classList.remove('bg-gray-500');
+                } else {
+                    dot.classList.remove('bg-brand-orange');
+                    dot.classList.add('bg-gray-500');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel();
+            resetInterval();
+        }
+
+        function showNextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateCarousel();
+        }
+        
+        function showPrevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function startInterval() {
+             slideInterval = setInterval(showNextSlide, 5000); // Cambia cada 5 segundos
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            startInterval();
+        }
+        
+        nextBtn.addEventListener('click', () => {
+            showNextSlide();
+            resetInterval();
+        });
+        prevBtn.addEventListener('click', () => {
+            showPrevSlide();
+            resetInterval();
+        });
+
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
+        carouselContainer.addEventListener('mouseleave', () => startInterval());
+
+        // Iniciar todo
+        updateCarousel();
+        startInterval();
+    </script>
+</body>
+</html>
